@@ -1,0 +1,36 @@
+.navbar-top 
+{
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+#loadingContent
+{
+    z-index: 10000000000;
+}
+
+@keyframes b {
+    to {
+        transform:rotate(1turn)
+    }
+}
+
+.spinner-border {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	vertical-align: text-bottom;
+	border: .25em solid currentColor;
+	border-right-color: transparent;
+	border-radius: 50%;
+	animation: b .75s linear infinite
+}
+
+.spinner-border-sm {
+	width: 1rem;
+	height: 1rem;
+	border-width: .2em
+}
