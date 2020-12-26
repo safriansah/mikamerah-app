@@ -13,7 +13,7 @@ class Controller extends BaseController
 
     public function sentRequest($data)
     {
-        // \dd('token: '.(isset($data->token) ? $data->token : ''));
+        // \dd($data);
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -28,7 +28,8 @@ class Controller extends BaseController
             CURLOPT_POSTFIELDS => $data->body,
             CURLOPT_HTTPHEADER => array(
                 'Content-Type: application/json',
-                'token: '.(isset($data->token) ? $data->token : '')
+                'token: '.(isset($data->token) ? $data->token : ''),
+                'param: '.(isset($data->param) ? $data->param : '{}'),
             ),
         ));
 

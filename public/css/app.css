@@ -1,10 +1,96 @@
+.bg-app-yellow
+{
+	background-color: #FECF3C !important;
+}
+
+.text-app-yellow
+{
+	color: #FECF3C !important;
+}
+
+.bg-app-light
+{
+	background-color: #F5F7F9 !important;
+}
+
+.text-app-light
+{
+	color: #F5F7F9 !important;
+}
+
+.bg-app-dark
+{
+	background-color: #31363D !important;
+}
+
+.text-app-dark
+{
+	color: #31363D !important;
+}
+
+.bg-app-grey
+{
+	background-color: #B0B3B6 !important;
+}
+
+.text-app-grey
+{
+	color: #B0B3B6 !important;
+}
+
+body{
+	font-size: 14px;
+}
+
+input, button, th, .thead-light, label{
+	font-size: 12px !important;
+}
+
 .navbar-top 
 {
+	font-size: 1rem;
+	height: 44px;
     position: fixed;
-    z-index: 10000;
-    width: 100%;
-    -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+	width: 100%;
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+    /* -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.bottom-menu
+{
+	height: 50px;
+	border-width: 2px 0 0;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.bottom-menu a {
+	padding: 8px;
+	display: block;
+	color: #525f7f;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+  
+.bottom-menu:hover {
+	background: #5e72e4;
+	color: #5e72e4;
+}
+  
+.bottom-menu a.active {
+	/* background-color: #5e72e4; */
+	color: #5e72e4;
+}
+
+.modal-body > form > div
+{
+	margin-bottom: 0px !important;
 }
 
 #loadingContent

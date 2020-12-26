@@ -29,7 +29,23 @@
             </div>
         </div>
     </div>
-    <div id="mainPage">
+    <div id="mainPage" class="pb-5">
+    </div>
+    <div id="bottomBar" class="bottom-menu bg-lighter d-none justify-content-center">
+        <div class="row w-100">
+            <div class="col-6">
+                <a href="#" id="homeButton" class="menuButton active">
+                    <i class="fas fa-home"></i>
+                    <div class="w-100 mt--1" style="font-size: 10px; font-weight: bold;">Home</div>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="#" id="profileButton" class="menuButton mx-2">
+                    <i class="fas fa-user"></i>
+                    <div class="w-100 mt--1" style="font-size: 10px; font-weight: bold;">Profile</div>
+                </a>
+            </div>
+        </div>
     </div>
     <!-- Argon Scripts -->
     <!-- Core -->
@@ -49,6 +65,7 @@
     <script src="{{ asset('js/app/navbar.js') }}"></script>
     <script src="{{ asset('js/app/login.js') }}"></script>
     <script src="{{ asset('js/app/profile.js') }}"></script>
+    <script src="{{ asset('js/app/dashboard.js') }}"></script>
 </body>
 
 </html>

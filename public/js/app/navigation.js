@@ -6,10 +6,27 @@ $(function(){
     startScreen();
 })
 
+$(document).on('click', '#profileButton', function(){
+    loadProfile();
+    $('.menuButton').removeClass('active');
+    $(this).addClass('active');
+})
+
+$(document).on('click', '#homeButton', async function(){
+    await loadPage('/app/dashboard');
+    getTransaction()
+    $('.menuButton').removeClass('active');
+    $(this).addClass('active');
+})
+
 async function startScreen(){
     let result = await checkToken();
     if (result) {
-        loadPage('/app/dashboard');   
+        await loadPage('/app/dashboard');
+        getTransaction()
+        showBottomBar()
+    } else {
+        showBottomBar(false);
     }
 }
 
@@ -96,6 +113,7 @@ function showNotif(data){
         icon = 'error'    
     }
     else if (data.responseCode == 200) {
+        $('.modal').modal('hide');
         title = 'Success'
         icon = 'success'    
     } else if (data.responseCode >= 400 && data.responseCode < 500) {
@@ -116,4 +134,64 @@ function setLoading(data){
     } else {
         loadingContainer.addClass('d-none')
     }
+}
+
+function formatAmount(amount, prefix){
+    var number_string = amount.replace(/[^,\d]/g, '').toString(),
+    split = number_string.split(','),
+    sisa = split[0].length % 3,
+    rupiah = split[0].substr(0, sisa),
+    ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+    // tambahkan titik jika yang di input sudah menjadi angka ribuan
+    if(ribuan){
+        separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+    }
+
+    rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+    return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+}
+
+function confirmDelete(name, settings, afterFunction){
+    swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover " + name,
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+    .then(async (willDelete) => {
+        if (willDelete) {
+            let result = await sentRequest(settings);
+            showNotif(result);
+            afterFunction();
+        } else {
+            // swal("Your imaginary file is safe!");
+        }
+    });
+}
+
+function showBottomBar(param = true) {
+    if (param) {
+        $('#bottomBar').removeClass('d-none');
+        $('#bottomBar').addClass('d-flex');
+    } else {
+        $('#bottomBar').removeClass('d-flex');
+        $('#bottomBar').addClass('d-none');
+    }
+}
+
+function getTodayDate() {
+    var date = new Date();
+
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+
+    var today = year + "-" + month + "-" + day;       
+    return today;
 }

@@ -1,12 +1,12 @@
 <!-- Header -->
     <div class="header pb-2 d-flex align-items-center" style="min-height: 360px; background-image: url({{asset('img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
       <!-- Mask -->
-      <span class="mask bg-gradient-secondary opacity-8"></span>
+      <span class="mask bg-gradient-lighter opacity-8"></span>
       <!-- Header container -->
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-dark">Hello <a class="usernameText"></a></h1>
+            <h3 class="display-2 text-dark">Hello <a class="usernameText"></a></h1>
             <p class="text-dark mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
             <!-- <a href="#!" class="btn btn-neutral">Edit profile</a> -->
           </div>
@@ -75,7 +75,7 @@
             </div>
           </div>
         </div> -->
-        <div class="col-xl-8 order-xl-1 mt--6">
+        <div class="col-xl-6 order-xl-1 mt--6">
           <div class="card">
             <div class="card-header">
               <div class="row align-items-center">
@@ -86,7 +86,6 @@
             </div>
             <div class="card-body">
               <form>
-                <h6 class="heading-small text-muted mb-4">User information</h6>
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-lg-6">
@@ -114,13 +113,26 @@
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <div class="btn btn-primary" id="saveProfile">Save</div>
+                      <button class="btn btn-primary" id="saveProfile">Save</button>
                     </div>
                   </div>
                 </div>
-                <hr class="my-4" />
-                <!-- Address -->
-                <h6 class="heading-small text-muted mb-4">Account setting</h6>
+                <!-- Description -->
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 order-xl-1">
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Edit username </h3>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form action="">
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-lg-6">
@@ -132,11 +144,25 @@
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <div class="btn btn-primary" id="saveUsername">Save</div>
+                      <button class="btn btn-primary" id="saveUsername">Save</button>
                     </div>
                   </div>
                 </div>
-                <hr class="my-4" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 order-xl-1">
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Edit password </h3>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form action="">
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-lg-6">
@@ -154,11 +180,10 @@
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <div id="savePassword" class="btn btn-primary">Save</div>
+                      <button id="savePassword" class="btn btn-primary">Save</button>
                     </div>
                   </div>
                 </div>
-                <!-- Description -->
               </form>
             </div>
           </div>

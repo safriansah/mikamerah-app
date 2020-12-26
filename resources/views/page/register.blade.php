@@ -1,7 +1,7 @@
   <!-- Main content -->
   <div class="main-content">
     <!-- Header -->
-    <div class="header bg-gradient-secondary py-5">
+    <div class="header bg-gradient-lighter py-5">
       <div class="container">
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">

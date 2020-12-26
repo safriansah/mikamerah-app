@@ -33,9 +33,10 @@ async function logout(){
         "data": JSON.stringify(body),
     };
     let result = await sentRequest(settings);
-    showNotif(result);
     if (result.responseCode == '200') {
         localStorage.clear();
-        loadPage('/app/login');
+        startScreen();
+    } else {
+        showNotif(result);
     }
 }
