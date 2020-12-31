@@ -1,7 +1,7 @@
   <!-- Main content -->
   <div class="main-content">
     <!-- Header -->
-    <div class="header bg-gradient-lighter py-5">
+    <div class="header bg-app-yellow mt--4 pt-7 pb-5">
       <div class="container">
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
@@ -12,14 +12,9 @@
           </div>
         </div>
       </div>
-      <div class="separator separator-bottom separator-skew zindex-100">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
     </div>
     <!-- Page content -->
-    <div class="container mt--8 pb-5">
+    <div class="container mt--8">
       <!-- Table -->
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8">
@@ -80,6 +75,9 @@
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
                     <input class="form-control" placeholder="Password" type="password" id="passwordText">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-eye togglePassword cursor-pointer" data-target="#passwordText"></i></span>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -88,6 +86,9 @@
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
                     <input class="form-control" placeholder="Confirm password" type="password" id="confirmPasswordText">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-eye togglePassword cursor-pointer" data-target="#confirmPasswordText"></i></span>
+                    </div>
                   </div>
                 </div>
                 <!-- <div class="text-muted font-italic"><small>password strength: <span class="text-success font-weight-700">strong</span></small></div> -->
@@ -109,7 +110,7 @@
           </div>
           <div class="row mt-3">
             <div class="col-6">
-              <a id="backToLoginButton" href="#" class="text-primary"><small>Back to login page</small></a>
+              <a id="backToLoginButton" href="#" class="text-primary">Back to login page</a>
             </div>
           </div>
         </div>

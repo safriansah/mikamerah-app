@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
     <link rel="stylesheet" href="{{ asset('vendor/nucleo/css/nucleo.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css">
     <!-- Argon CSS -->
     <link rel="stylesheet" href="{{ asset('css/argon.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css">
@@ -23,15 +23,15 @@
 
 <body class="bg-white">
     <div id="loadingContainer" class="">
-        <div id="loadingContent" class="text-center w-100 h-100 bg-dark position-fixed d-flex justify-content-center opacity-5">
-            <div class="spinner-border align-self-center text-white" role="status">
+        <div id="loadingContent" class="text-center w-100 h-100 bg-app-light position-fixed d-flex justify-content-center">
+            <div class="spinner-border align-self-center text-app-yellow" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
     </div>
     <div id="mainPage" class="pb-5">
     </div>
-    <div id="bottomBar" class="bottom-menu bg-lighter d-none justify-content-center">
+    <div id="bottomBar" class="bottom-menu bg-app-dark color-app-grey d-none justify-content-center">
         <div class="row w-100">
             <div class="col-6">
                 <a href="#" id="homeButton" class="menuButton active">
@@ -49,11 +49,11 @@
     </div>
     <!-- Argon Scripts -->
     <!-- Core -->
-    <script src="{{ asset('vendor/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('vendor/js-cookie/js.cookie.js') }}"></script>
-    <script src="{{ asset('vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
-    <script src="{{ asset('vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery-scroll-lock@3.1.3/jquery-scrollLock.min.js"></script>
     <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

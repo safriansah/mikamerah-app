@@ -1,12 +1,12 @@
   <!-- Main content -->
   <div class="main-content" id="panel">
     <!-- Header -->
-    <div class="header bg-lighter pt-5 pb-6">
+    <div class="header bg-app-yellow pt-5 pb-6">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-dark d-inline-block mb-0">Default</h6>
+              <h3 class="text-dark d-inline-block mb-0">List Transactions</h3>
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 col-5 text-right">
               <a href="#" class="btn btn-sm btn-neutral" data-toggle="modal" data-target="#newTransactionModal">New</a>
-              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+              <!-- <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
             </div>
           </div>
           <!-- Card stats -->
@@ -25,14 +25,9 @@
           </div>
         </div>
       </div>
-      <div class="separator separator-bottom separator-skew zindex-100">
-          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-          </svg>
-      </div>
     </div>
     <!-- Page content -->
-    <div class="container-fluid mt--6">
+    <div class="container-fluid mt--6 bg-app-light">
       <div class="row" id="transactionCard">
         
       </div>

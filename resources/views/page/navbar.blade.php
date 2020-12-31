@@ -1,5 +1,5 @@
     <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark bg-lighter border-bottom">
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-app-yellow text-app-dark border-bottom">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->

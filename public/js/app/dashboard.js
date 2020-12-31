@@ -167,8 +167,8 @@ async function getTransaction(){
                         ${formatAmount(children.amount + '', 'Rp. ')}
                     </td>
                     <td>
-                        <a href="#!" class="mx-2" data-toggle="modal" data-target="#newTransactionModal" data-id="${children.id}" data-parent="${data.id}"><i class="fas fa-pencil-alt"></i></a>
-                        <a href="#!" class="mx-2 deleteTransaction" data-id="${children.id}" data-title="${children.title}"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#!" class="mx-2 text-app-grey" data-toggle="modal" data-target="#newTransactionModal" data-id="${children.id}" data-parent="${data.id}"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="#!" class="mx-2 text-app-grey deleteTransaction" data-id="${children.id}" data-title="${children.title}"><i class="fas fa-trash-alt"></i></a>
                     </td>
                     </tr>`;
                 }
@@ -191,9 +191,9 @@ async function getTransaction(){
                         <h4 class="mb-0">${data.title}</h4>
                     </div>
                     <div class="col text-right">
-                        <a href="#!" class="btn btn-sm btn-success" data-toggle="modal" data-target="#newTransactionModal" data-parent="${data.id}"><i class="fas fa-plus"></i></a>
-                        <a href="#!" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#newTransactionModal" data-id="${data.id}"><i class="fas fa-pencil-alt"></i></a>
-                        <a href="#!" class="btn btn-sm btn-danger deleteTransaction" data-id="${data.id}" data-title="${data.title}"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#!" class="btn btn-sm btn-neutral text-app-dark" data-toggle="modal" data-target="#newTransactionModal" data-parent="${data.id}"><i class="fas fa-plus"></i></a>
+                        <a href="#!" class="btn btn-sm btn-neutral text-app-dark" data-toggle="modal" data-target="#newTransactionModal" data-id="${data.id}"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="#!" class="btn btn-sm btn-neutral text-app-dark deleteTransaction" data-id="${data.id}" data-title="${data.title}"><i class="fas fa-trash-alt"></i></a>
                     </div>
                     </div>
                 </div>

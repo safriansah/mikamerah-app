@@ -19,6 +19,15 @@ $(document).on('click', '#homeButton', async function(){
     $(this).addClass('active');
 })
 
+$(document).on('click', '.togglePassword', function(){
+    let passwordForm = $(this).data('target');
+    const password = document.querySelector(passwordForm);
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+})
+
 async function startScreen(){
     let result = await checkToken();
     if (result) {

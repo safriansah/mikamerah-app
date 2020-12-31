@@ -33,9 +33,10 @@ async function login(){
     };
 
     let result = await sentRequest(settings);
-    showNotif(result);
     if (result.responseCode == '200') {
         localStorage.setItem("token", result.data.token);
         startScreen();
+    } else {
+        showNotif(result);
     }
 }

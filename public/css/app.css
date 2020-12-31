@@ -38,8 +38,18 @@
 	color: #B0B3B6 !important;
 }
 
+.main-content .header
+{
+	border-radius: 1rem;
+}
+
+.cursor-pointer
+{
+	cursor: pointer;
+}
+
 body{
-	font-size: 14px;
+	font-size: 14px
 }
 
 input, button, th, .thead-light, label{
@@ -72,7 +82,7 @@ input, button, th, .thead-light, label{
 .bottom-menu a {
 	padding: 8px;
 	display: block;
-	color: #525f7f;
+	color: #B0B3B6;
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
@@ -80,12 +90,12 @@ input, button, th, .thead-light, label{
   
 .bottom-menu:hover {
 	background: #5e72e4;
-	color: #5e72e4;
+	/* color: #5e72e4; */
 }
   
 .bottom-menu a.active {
 	/* background-color: #5e72e4; */
-	color: #5e72e4;
+	color: #fff;
 }
 
 .modal-body > form > div

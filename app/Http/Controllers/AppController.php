@@ -59,6 +59,7 @@ class AppController extends Controller
                     'body'=> $request->getContent(),
                     'token' => $request->header('token')
                 ];
+                // return json_encode($data);
             }
             else if ($api == 'saveUsername') {
                 # code...
@@ -133,6 +134,7 @@ class AppController extends Controller
             }
 
             if ($data) {
+                // return $data->url;
                 $result = json_decode($this->sentRequest($data), true);
                 // dd($data);
             }

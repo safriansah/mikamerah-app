@@ -1,7 +1,7 @@
 <!-- Header -->
     <div class="header pb-2 d-flex align-items-center" style="min-height: 360px; background-image: url({{asset('img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
       <!-- Mask -->
-      <span class="mask bg-gradient-lighter opacity-8"></span>
+      <span class="mask bg-app-yellow opacity-8"></span>
       <!-- Header container -->
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
@@ -12,14 +12,9 @@
           </div>
         </div>
       </div>
-      <div class="separator separator-bottom separator-skew zindex-100">
-          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-          </svg>
-      </div>
     </div>
     <!-- Page content -->
-    <div class="container-fluid">
+    <div class="container-fluid bg-app-light">
       <div class="row">
         <!-- <div class="col-xl-4 order-xl-2">
           <div class="card card-profile">
@@ -90,30 +85,42 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-name">Fullname</label>
-                        <input type="text" id="input-name" class="form-control" placeholder="Full name">
+                      <div class="input-group input-group-merge input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Name" type="text" id="input-name">
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                          </div>
+                          <input class="form-control" placeholder="Email" type="email" id="input-email">
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control" placeholder="email@example.com">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-phone">Phone number</label>
-                        <input type="email" id="input-phone" class="form-control" placeholder="085730xxxxxx">
+                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                          </div>
+                          <input class="form-control" placeholder="Phone" type="phone" id="input-phone">
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <button class="btn btn-primary" id="saveProfile">Save</button>
+                      <button class="btn btn-neutral" id="saveProfile">Save</button>
                     </div>
                   </div>
                 </div>
@@ -137,14 +144,18 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control" placeholder="Username">
+                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                          </div>
+                          <input class="form-control" placeholder="Username" type="text" id="input-username">
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <button class="btn btn-primary" id="saveUsername">Save</button>
+                      <button class="btn btn-neutral" id="saveUsername">Save</button>
                     </div>
                   </div>
                 </div>
@@ -167,20 +178,34 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-password">Password</label>
-                        <input type="password" id="input-password" class="form-control" placeholder="Password">
+                        <div class="input-group input-group-merge input-group-alternative">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                          </div>
+                          <input class="form-control" placeholder="Password" type="password" id="input-password">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-eye togglePassword cursor-pointer" data-target="#input-password"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-confirm-password">Confirm password</label>
-                        <input type="password" id="input-confirm-password" class="form-control" placeholder="Confirm password">
+                        <div class="input-group input-group-merge input-group-alternative">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                          </div>
+                          <input class="form-control" placeholder="Confirm password" type="password" id="input-confirm-password">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-eye togglePassword cursor-pointer" data-target="#input-confirm-password"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <button id="savePassword" class="btn btn-primary">Save</button>
+                      <button id="savePassword" class="btn btn-neutral">Save</button>
                     </div>
                   </div>
                 </div>
