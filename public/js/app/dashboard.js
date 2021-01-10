@@ -75,6 +75,7 @@ $(document).on('click', '.deleteTransaction', async function(){
 })
 
 async function saveTransactionData(){
+    setLoading(true);
     let token = localStorage.getItem('token'),
     id = $('#newTransactionId').val(),
     parent = $('#newTransactionParent').val(),
@@ -122,7 +123,7 @@ async function saveTransactionData(){
 
 async function getTransaction(){
     const transactionCard = $('#transactionCard');
-    transactionCard.html('');
+    transactionCard.html('Loading...');
     let token = localStorage.getItem('token');
     let settings = {
         "url": "/api/app/getTransaction",
@@ -135,6 +136,7 @@ async function getTransaction(){
         "data": JSON.stringify({}),
     };
     let result = await sentRequest(settings);
+    transactionCard.html('');
     if (result.responseCode != 200) {
         showNotif(result);
     }

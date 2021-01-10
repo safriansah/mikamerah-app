@@ -120,7 +120,7 @@
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <button class="btn btn-neutral" id="saveProfile">Save</button>
+                      <button class="btn btn-neutral bg-app-dark text-app-yellow col-6" id="saveProfile">Save</button>
                     </div>
                   </div>
                 </div>
@@ -155,7 +155,7 @@
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <button class="btn btn-neutral" id="saveUsername">Save</button>
+                      <button class="btn btn-neutral bg-app-dark text-app-yellow col-6" id="saveUsername">Save</button>
                     </div>
                   </div>
                 </div>
@@ -205,7 +205,7 @@
                   </div>
                   <div class="row">
                     <div class="col-12 text-right">
-                      <button id="savePassword" class="btn btn-neutral">Save</button>
+                      <button id="savePassword" class="btn btn-neutral bg-app-dark text-app-yellow col-6">Save</button>
                     </div>
                   </div>
                 </div>

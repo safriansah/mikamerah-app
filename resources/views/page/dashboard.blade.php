@@ -16,7 +16,7 @@
               </nav>
             </div>
             <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-sm btn-neutral" data-toggle="modal" data-target="#newTransactionModal">New</a>
+              <a href="#" class="btn btn-sm btn-neutral text-app-dark" data-toggle="modal" data-target="#newTransactionModal">New</a>
               <!-- <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
             </div>
           </div>
@@ -75,8 +75,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="newTransactionSave" >Save</button>
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-neutral bg-app-dark text-app-yellow col-12 px-0 mx-0" id="newTransactionSave" >Save</button>
         </div>
       </div>
     </div>

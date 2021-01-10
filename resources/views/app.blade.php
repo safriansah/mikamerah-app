@@ -21,7 +21,7 @@
     <!-- <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 </head>
 
-<body class="bg-white">
+<body class="bg-app-light">
     <div id="loadingContainer" class="">
         <div id="loadingContent" class="text-center w-100 h-100 bg-app-light position-fixed d-flex justify-content-center">
             <div class="spinner-border align-self-center text-app-yellow" role="status">
@@ -31,7 +31,7 @@
     </div>
     <div id="mainPage" class="pb-5">
     </div>
-    <div id="bottomBar" class="bottom-menu bg-app-dark color-app-grey d-none justify-content-center">
+    <div id="bottomBar" class="bottom-menu bg-white color-app-grey d-none justify-content-center">
         <div class="row w-100">
             <div class="col-6">
                 <a href="#" id="homeButton" class="menuButton active">

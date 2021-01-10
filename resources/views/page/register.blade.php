@@ -97,20 +97,20 @@
                     <div class="custom-control custom-control-alternative custom-checkbox">
                       <input class="custom-control-input" id="customCheckRegister" type="checkbox">
                       <label class="custom-control-label" for="customCheckRegister">
-                        <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
+                        <span class="text-muted">I agree with the <a class="text-app-dark" href="#!">Privacy Policy</a></span>
                       </label>
                     </div>
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary mt-4" id="createButton">Create account</button>
+                  <button type="button" class="btn btn-neutral bg-app-dark text-app-yellow col-12 mt-4" id="createButton">Create account</button>
                 </div>
               </form>
             </div>
           </div>
           <div class="row mt-3">
             <div class="col-6">
-              <a id="backToLoginButton" href="#" class="text-primary">Back to login page</a>
+              <a id="backToLoginButton" href="#" class="text-app-dark"><i class="fas fa-chevron-left mr-1"></i> Back to login page</a>
             </div>
           </div>
         </div>

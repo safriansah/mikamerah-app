@@ -13,6 +13,7 @@ $(document).on('keypress', '#passwordText', function(e){
 })
 
 async function login(){
+    setLoading(true);
     const usernameText = $('#usernameText'),
     passwordText = $('#passwordText');
 

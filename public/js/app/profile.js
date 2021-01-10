@@ -11,6 +11,7 @@ $(document).on('click', '#savePassword', function(){
 })
 
 async function saveProfile(){
+    setLoading(true);
     const name = $('#input-name'),
     email = $('#input-email'),
     phone = $('#input-phone'),
@@ -39,6 +40,7 @@ async function saveProfile(){
 }
 
 async function saveUsername(){
+    setLoading(true);
     const username = $('#input-username'),
     token = localStorage.getItem('token');
 
@@ -62,6 +64,7 @@ async function saveUsername(){
 }
 
 async function savePassword(){
+    setLoading(true);
     const password = $('#input-password'),
     confirmPassword = $('#input-confirm-password'),
     token = localStorage.getItem('token');

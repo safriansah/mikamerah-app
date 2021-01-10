@@ -62,7 +62,7 @@
                                 </label>
                                 </div> -->
                                 <div class="text-center">
-                                    <button type="button" class="btn btn-primary my-4" id="loginButton">Sign in</button>
+                                    <button type="button" class="btn btn-neutral bg-app-dark my-4 col-12 text-app-yellow" id="loginButton">Sign in</button>
                                 </div>
                             </form>
                         </div>
@@ -72,7 +72,7 @@
                         <a href="#" class="text-light"><small>Forgot password?</small></a>
                         </div> -->
                         <div class="col-12 text-right">
-                            <a href="#" id="registerText" class="text-primary">Create new account</a>
+                            <a href="#" id="registerText" class="text-app-dark">Create new account <i class="ml-1 fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
