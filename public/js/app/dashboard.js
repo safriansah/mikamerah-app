@@ -1,4 +1,9 @@
 const notFoundCard = '<div class="text-center w-100 py-6">No data found</div>';
+const elementLoading = `<div class="w-100 text-center">
+<div class="spinner-border bg-app-dark text-app-yellow" role="status">
+    <span class="sr-only">Loading...</span>
+</div>
+</div>`;
 
 $(document).on('click', '#newTransactionSave', function(){
     saveTransactionData()
@@ -123,7 +128,7 @@ async function saveTransactionData(){
 
 async function getTransaction(){
     const transactionCard = $('#transactionCard');
-    transactionCard.html('Loading...');
+    transactionCard.html(elementLoading);
     let token = localStorage.getItem('token');
     let settings = {
         "url": "/api/app/getTransaction",
@@ -185,18 +190,18 @@ async function getTransaction(){
                     ${formatAmount(volume + '', 'Rp. ')}
                 </td>
             </tr>`
-            let content = `<div class="col-xl-4">
+            let content = `<div class="col-xl-4 mb-4">
                 <div class="card">
                 <div class="card-header border-0">
-                    <div class="row align-items-center">
-                    <div class="col">
-                        <h4 class="mb-0">${data.title}</h4>
-                    </div>
-                    <div class="col text-right">
-                        <a href="#!" class="btn btn-sm btn-neutral text-app-dark" data-toggle="modal" data-target="#newTransactionModal" data-parent="${data.id}"><i class="fas fa-plus"></i></a>
-                        <a href="#!" class="btn btn-sm btn-neutral text-app-dark" data-toggle="modal" data-target="#newTransactionModal" data-id="${data.id}"><i class="fas fa-pencil-alt"></i></a>
-                        <a href="#!" class="btn btn-sm btn-neutral text-app-dark deleteTransaction" data-id="${data.id}" data-title="${data.title}"><i class="fas fa-trash-alt"></i></a>
-                    </div>
+                    <div class="row align-items-center py-2">
+                        <div class="col">
+                            <h6 class="mb-0">${data.title}</h6>
+                        </div>
+                        <div class="col text-right">
+                            <a href="#!" class="mx-2 text-app-dark" data-toggle="modal" data-target="#newTransactionModal" data-parent="${data.id}"><i class="fas fa-plus"></i></a>
+                            <a href="#!" class="mx-2 text-app-dark" data-toggle="modal" data-target="#newTransactionModal" data-id="${data.id}"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#!" class="mx-2 text-app-dark deleteTransaction" data-id="${data.id}" data-title="${data.title}"><i class="fas fa-trash-alt"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="table-responsive">

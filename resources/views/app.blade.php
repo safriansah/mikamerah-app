@@ -15,16 +15,15 @@
     <!-- Icons -->
     <link rel="stylesheet" href="{{ asset('vendor/nucleo/css/nucleo.css') }}" type="text/css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css">
-    <!-- Argon CSS -->
-    <link rel="stylesheet" href="{{ asset('css/argon.css') }}" type="text/css">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css">
-    <!-- <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 </head>
 
 <body class="bg-app-light">
     <div id="loadingContainer" class="">
         <div id="loadingContent" class="text-center w-100 h-100 bg-app-light position-fixed d-flex justify-content-center">
-            <div class="spinner-border align-self-center text-app-yellow" role="status">
+            <div class="spinner-border align-self-center text-app-light bg-app-yellow" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
@@ -57,8 +56,8 @@
     <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- Argon JS -->
-    <script src="{{ asset('js/argon.js') }}"></script>
+    <!-- App JS -->
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- custom js -->
     <script src="{{ asset('js/app/navigation.js') }}"></script>
     <script src="{{ asset('js/app/register.js') }}"></script>

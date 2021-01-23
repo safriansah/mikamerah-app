@@ -1,22 +1,15 @@
   <!-- Main content -->
   <div class="main-content" id="panel">
     <!-- Header -->
-    <div class="header bg-app-yellow pt-5 pb-6">
-      <div class="container-fluid">
+    <div class="header bg-app-yellow pt-5 pb-5">
+      <div class="container-fluid pb-5">
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
-              <h3 class="text-dark d-inline-block mb-0">List Transactions</h3>
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Default</li>
-                </ol>
-              </nav>
+              <h5 class="text-dark d-inline-block mb-0">Dashboard</h5>
             </div>
-            <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-sm btn-neutral text-app-dark" data-toggle="modal" data-target="#newTransactionModal">New</a>
+            <div class="col-lg-12 col-12 text-right mt-4">
+              <a href="#" class="btn bg-app-dark text-white col-12" data-toggle="modal" data-target="#newTransactionModal">New</a>
               <!-- <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
             </div>
           </div>
@@ -27,7 +20,7 @@
       </div>
     </div>
     <!-- Page content -->
-    <div class="container-fluid mt--6 bg-app-light">
+    <div class="container-fluid mt--7 mb-5">
       <div class="row" id="transactionCard">
         
       </div>
@@ -47,7 +40,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body py-0">
+        <div class="modal-body">
           <form>
             <div class="form-group">
               <input type="hidden" id="transactionInputType">
