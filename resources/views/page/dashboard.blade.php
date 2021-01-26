@@ -32,8 +32,8 @@
 
   <!-- Modal -->
   <div class="modal fade" id="newTransactionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content my-6">
+    <div class="modal-dialog pt-5" role="document">
+      <div class="modal-content my-5">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Transaction Form</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">

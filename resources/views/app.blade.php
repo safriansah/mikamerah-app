@@ -13,11 +13,11 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="{{ asset('vendor/nucleo/css/nucleo.css') }}" type="text/css">
+    <link rel="stylesheet" href="/vendor/nucleo/css/nucleo.css" type="text/css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css">
     <!-- App CSS -->
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css">
+    <link rel="stylesheet" href="/css/app.css" type="text/css">
 </head>
 
 <body class="bg-app-light">
@@ -59,12 +59,12 @@
     <!-- App JS -->
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- custom js -->
-    <script src="{{ asset('js/app/navigation.js') }}"></script>
-    <script src="{{ asset('js/app/register.js') }}"></script>
-    <script src="{{ asset('js/app/navbar.js') }}"></script>
-    <script src="{{ asset('js/app/login.js') }}"></script>
-    <script src="{{ asset('js/app/profile.js') }}"></script>
-    <script src="{{ asset('js/app/dashboard.js') }}"></script>
+    <script src="/js/app/navigation.js"></script>
+    <script src="/js/app/register.js"></script>
+    <script src="/js/app/navbar.js"></script>
+    <script src="/js/app/login.js"></script>
+    <script src="/js/app/profile.js"></script>
+    <script src="/js/app/dashboard.js"></script>
 </body>
 
 </html>
