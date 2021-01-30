@@ -8,10 +8,6 @@
             <div class="col-lg-6 col-7">
               <h5 class="text-dark d-inline-block mb-0">Dashboard</h5>
             </div>
-            <div class="col-lg-12 col-12 text-right mt-4">
-              <a href="#" class="btn bg-app-dark text-white col-12" data-toggle="modal" data-target="#newTransactionModal">New</a>
-              <!-- <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
-            </div>
           </div>
           <!-- Card stats -->
           <div class="row">
@@ -24,6 +20,10 @@
       <div class="row" id="transactionCard">
         
       </div>
+      <div class="col-lg-12 col-12 text-right">
+        <a href="#" class="btn bg-app-dark text-white col-12" data-toggle="modal" data-target="#newTransactionModal">New</a>
+        <!-- <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
+      </div>
       <div class="row">
 
       </div>
@@ -32,9 +32,9 @@
 
   <!-- Modal -->
   <div class="modal fade" id="newTransactionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog pt-5" role="document">
-      <div class="modal-content my-5">
-        <div class="modal-header">
+    <div class="modal-dialog w-100 m-0" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-none">
           <h5 class="modal-title" id="exampleModalLabel">Transaction Form</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>

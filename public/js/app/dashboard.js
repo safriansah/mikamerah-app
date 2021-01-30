@@ -1,5 +1,5 @@
-const notFoundCard = '<div class="text-center w-100 py-6">No data found</div>';
-const elementLoading = `<div class="w-100 text-center">
+const notFoundCard = '<div class="text-center w-100 py-5">No data found</div>';
+const elementLoading = `<div class="w-100 py-5 text-center">
 <div class="spinner-border bg-app-dark text-app-yellow" role="status">
     <span class="sr-only">Loading...</span>
 </div>
@@ -150,78 +150,55 @@ async function getTransaction(){
     } else {
         for(let data of result.data){
             // console.log('data::', data);
-            let tbody = `<tr>
-                <th>
-                    Amount
-                </th>
-                <td class="${(data.type == 'cr' ? 'text-success' : 'text-danger')}">
-                    ${formatAmount(data.amount + '', 'Rp. ')}
-                </td>
-            </tr>`;
-            if (data.children.length < 1) {
-                tbody += `<tr>
-                    <td colspan="3">
-                        No data found
-                    </td>
-                </tr>`
-            } else {
-                for(let children of data.children){
-                    tbody += `<tr>
-                    <td>
-                        ${children.title}
-                    </td>
-                    <td class="${(children.type == 'cr' ? 'text-success' : 'text-danger')}">
-                        ${formatAmount(children.amount + '', 'Rp. ')}
-                    </td>
-                    <td>
-                        <a href="#!" class="mx-2 text-app-grey" data-toggle="modal" data-target="#newTransactionModal" data-id="${children.id}" data-parent="${data.id}"><i class="fas fa-pencil-alt"></i></a>
-                        <a href="#!" class="mx-2 text-app-grey deleteTransaction" data-id="${children.id}" data-title="${children.title}"><i class="fas fa-trash-alt"></i></a>
-                    </td>
-                    </tr>`;
-                }
-            }
             // console.log('volume::', data.amount, data.volume);
-            let volume = data.amount + data.volume;
-            let tfoot = `<tr>
-                <th scope="col">
-                    Volume 
-                </th>
-                <td colspan="2" class="${(volume > 0 ? 'text-success' : 'text-danger')}">
-                    ${formatAmount(volume + '', 'Rp. ')}
-                </td>
-            </tr>`
-            let content = `<div class="col-xl-4 mb-4">
-                <div class="card">
-                <div class="card-header border-0">
-                    <div class="row align-items-center py-2">
-                        <div class="col">
-                            <h6 class="mb-0">${data.title}</h6>
+            let amount = (data.type == 'db' ? data.amount * (-1) : data.amount)
+            let volume =  data.volume;
+            let save = (amount - volume) * (-1);
+            let content = `<div class="w-100 px-4"><div class="card border-light mb-3">
+                <div class="card-body">
+                    <div class="row card-title">
+                        <div class="col-10 h5">${data.title}</div>
+                        <div class="col-2 h6 text-right">
+                            <div class="dropdown show">
+                                <div class="" id="dropdownMenuLink" data-toggle="dropdown">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            
+                                <div class="dropdown-menu bg-transparent p-0 border-0 justify-content-center" style="margin-left: -128px;" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item m-0 my-2 p-2 text-center bg-app-dark text-app-yellow rounded-circle" href="#" data-toggle="modal" data-target="#newTransactionModal" style="width: 40px; margin-left: 116px !important" data-parent="${data.id}"><i class="fas fa-plus"></i></a>
+                                    <a class="dropdown-item text-center m-0 my-2 p-2 bg-white bg-app-dark text-app-yellow rounded-circle" href="#" data-toggle="modal" data-target="#newTransactionModal" style="width: 40px; margin-left: 116px !important" data-id="${data.id}"><i class="fas fa-pencil-alt"></i></a>
+                                    <a class="dropdown-item text-center m-0 my-2 p-2 bg-white deleteTransaction bg-app-dark text-app-yellow rounded-circle" data-id="${data.id}" style="width: 40px; margin-left: 116px !important" data-title="${data.title}" href="#"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col text-right">
-                            <a href="#!" class="mx-2 text-app-dark" data-toggle="modal" data-target="#newTransactionModal" data-parent="${data.id}"><i class="fas fa-plus"></i></a>
-                            <a href="#!" class="mx-2 text-app-dark" data-toggle="modal" data-target="#newTransactionModal" data-id="${data.id}"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="#!" class="mx-2 text-app-dark deleteTransaction" data-id="${data.id}" data-title="${data.title}"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col-4">
+                            Target
+                        </div>
+                        <div class="col-8 text-right ${(amount > 0 ? 'text-dark' : 'text-danger')}">
+                            ${formatAmount(amount + '', 'Rp. ')}
+                        </div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col-4">
+                            Volume
+                        </div>
+                        <div class="col-8 text-right ${(volume > 0 ? 'text-dark' : 'text-danger')}">
+                            (${(volume/amount*100).toFixed(2)}%) ${formatAmount(volume + '', 'Rp. ')}
+                        </div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col-4">
+                            Save
+                        </div>
+                        <div class="col-8 text-right ${(save > 0 ? 'text-dark' : 'text-danger')}">
+                            ${formatAmount(save + '', 'Rp. ')}
                         </div>
                     </div>
                 </div>
-                <div class="table-responsive">
-                    <!-- Projects table -->
-                    <table class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                        <tr>
-                        <th scope="col">Title</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${tbody}
-                        ${tfoot}
-                    </tbody>
-                    </table>
-                </div>
-                </div>
-            </div>`
+                <div class="card-footer bg-transparent text-app-dark text-center h6 cursor-pointer">View</div>
+            </div></div>`
             transactionCard.append(content);
         }
     }

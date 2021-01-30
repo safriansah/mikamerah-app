@@ -99,6 +99,14 @@ input, button, th, .thead-light, label{
 	color: #31363D;
 }
 
+.modal-dialog {
+	position:fixed;
+	top:auto;
+	right:auto;
+	left:auto;
+	bottom:0;
+}
+
 .modal-body > form > div
 {
 	margin-bottom: 0px !important;

@@ -9,9 +9,9 @@
             </li>
           </ul>
           <ul class="navbar-nav align-items-center ml-auto ml-md-0 ">
-            <li>
+            <!-- <li>
               <a href="#" id="logoutButton" class="text-app-dark"><i class="fas fa-sign-out-alt"></i></a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
