@@ -111,6 +111,10 @@ input, button, th, .thead-light, label{
 	z-index: 10000;
 }
 
+.modal {
+	z-index: 100000;
+}
+
 .modal-body > form > div
 {
 	margin-bottom: 0px !important;
