@@ -107,6 +107,10 @@ input, button, th, .thead-light, label{
 	bottom:0;
 }
 
+#bottomBar {
+	z-index: 10000;
+}
+
 .modal-body > form > div
 {
 	margin-bottom: 0px !important;
@@ -114,7 +118,7 @@ input, button, th, .thead-light, label{
 
 #loadingContent
 {
-    z-index: 10000000000;
+    z-index: 10000;
 }
 
 .btn

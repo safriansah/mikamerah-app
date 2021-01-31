@@ -160,14 +160,14 @@ async function getTransaction(){
                         <div class="col-10 h5">${data.title}</div>
                         <div class="col-2 h6 text-right">
                             <div class="dropdown show">
-                                <div class="" id="dropdownMenuLink" data-toggle="dropdown">
+                                <div class="" id="dropdownMenuLink${data.id}" data-toggle="dropdown">
                                     <i class="fas fa-ellipsis-v"></i>
                                 </div>
                             
-                                <div class="dropdown-menu bg-transparent p-0 border-0 justify-content-center" style="margin-left: -128px;" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item m-0 my-2 p-2 text-center bg-app-dark text-app-yellow rounded-circle" href="#" data-toggle="modal" data-target="#newTransactionModal" style="width: 40px; margin-left: 116px !important" data-parent="${data.id}"><i class="fas fa-plus"></i></a>
-                                    <a class="dropdown-item text-center m-0 my-2 p-2 bg-white bg-app-dark text-app-yellow rounded-circle" href="#" data-toggle="modal" data-target="#newTransactionModal" style="width: 40px; margin-left: 116px !important" data-id="${data.id}"><i class="fas fa-pencil-alt"></i></a>
-                                    <a class="dropdown-item text-center m-0 my-2 p-2 bg-white deleteTransaction bg-app-dark text-app-yellow rounded-circle" data-id="${data.id}" style="width: 40px; margin-left: 116px !important" data-title="${data.title}" href="#"><i class="fas fa-trash-alt"></i></a>
+                                <div class="dropdown-menu bg-transparent p-0 border-0 justify-content-center" style="margin-left: -128px;" aria-labelledby="dropdownMenuLink${data.id}">
+                                    <a class="dropdown-item m-0 my-2 p-2 text-center bg-app-dark text-app-yellow rounded-circle" href="#" data-toggle="modal" data-target="#newTransactionModal" style="width: 35px; margin-left: 116px !important" data-parent="${data.id}"><i class="fas fa-plus"></i></a>
+                                    <a class="dropdown-item text-center m-0 my-2 p-2 bg-white bg-app-dark text-app-yellow rounded-circle" href="#" data-toggle="modal" data-target="#newTransactionModal" style="width: 35px; margin-left: 116px !important" data-id="${data.id}"><i class="fas fa-pencil-alt"></i></a>
+                                    <a class="dropdown-item text-center m-0 my-2 p-2 bg-white deleteTransaction bg-app-dark text-app-yellow rounded-circle" data-id="${data.id}" style="width: 35px; margin-left: 116px !important" data-title="${data.title}" href="#"><i class="fas fa-trash-alt"></i></a>
                                 </div>
                             </div>
                         </div>

@@ -7,12 +7,18 @@ $(function(){
 })
 
 $(document).on('click', '#profileButton', function(){
+    if ($(this).hasClass('active')) {
+        return;
+    }
     loadProfile();
     $('.menuButton').removeClass('active');
     $(this).addClass('active');
 })
 
 $(document).on('click', '#homeButton', async function(){
+    if ($(this).hasClass('active')) {
+        return;
+    }
     await loadPage('/app/dashboard');
     getTransaction()
     $('.menuButton').removeClass('active');

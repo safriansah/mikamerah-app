@@ -1,8 +1,5 @@
-$(document).on('click', '#profileButton', function(){
-    loadProfile();
-})
-
 $(document).on('click', '#logoutButton', function(){
+    setLoading(true);
     logout();
 })
 
