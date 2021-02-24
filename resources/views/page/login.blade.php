@@ -6,7 +6,7 @@
                 <div class="header-body text-center mb-5">
                     <div class="row justify-content-center">
                         <div class="col-xl-5 col-lg-6 col-md-8 px-5 mb-5">
-                            <h1 class="text-dark">Welcome!</h1>
+                            <h1 class="text-dark">Welcome Yolla!</h1>
                             <p class="text-lead text-dark">Mikamerah app</p>
                         </div>
                     </div>
